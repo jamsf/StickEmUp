@@ -217,6 +217,9 @@ class Input
 			HXP.stage.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown, false,  2);
 			HXP.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp, false,  2);
 			HXP.stage.addEventListener(MouseEvent.MOUSE_WHEEL, onMouseWheel, false,  2);
+			HXP.stage.addEventListener(MouseEvent.MOUSE_, onMouseDown, false,  2);
+			HXP.stage.addEventListener(MouseEvent.MOUSE_UP, onMouseUp, false,  2);
+			HXP.stage.addEventListener(MouseEvent.MOUSE_WHEEL, onMouseWheel, false,  2);
 
 			multiTouchSupported = Multitouch.supportsTouchEvents;
 			if (multiTouchSupported)
