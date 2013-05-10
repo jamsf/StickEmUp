@@ -1,41 +1,36 @@
 package com.stickemup;
 
-import nme.display.Sprite;
-import nme.events.Event;
-import nme.Lib;
+import com.haxepunk.Engine;
+import com.haxepunk.utils.Input;
 
 /**
  * ...
  * @author Jams
  */
 
-class Main extends Sprite 
+class Main extends Engine 
 {
 	
 	public function new() 
 	{
-		super();
-		#if iphone
-		Lib.current.stage.addEventListener(Event.RESIZE, init);
-		#else
-		addEventListener(Event.ADDED_TO_STAGE, init);
-		#end
-	}
-
-	private function init(e) 
-	{
-		// entry point
-		
-		// new to Haxe NME? please read *carefully* the readme.txt file!
+		super(800, 600, 60, false);
+			
+			// Create a Bank world
+			//FP.world = new Bank();
+			
 	}
 	
-	static public function main() 
+	override public function init()
 	{
-		var stage = Lib.current.stage;
-		stage.scaleMode = nme.display.StageScaleMode.NO_SCALE;
-		stage.align = nme.display.StageAlign.TOP_LEFT;
-		
-		Lib.current.addChild(new Main());
+		Sys.println("THIS IS WORKING PROPERLY");
 	}
 	
+	override public function update() 
+	{
+		super.update();
+		
+		if (Input.check(Key.DELETE))
+			FP.console.enable();
+		Input.mouseCursor = "hide";
+	}
 }
