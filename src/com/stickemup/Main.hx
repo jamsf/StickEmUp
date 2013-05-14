@@ -1,7 +1,8 @@
 package com.stickemup;
 
 import com.haxepunk.Engine;
-import com.haxepunk.utils.Input;
+import com.haxepunk.HXP;
+import com.stickemup.worlds.Bank;
 
 /**
  * ...
@@ -11,26 +12,18 @@ import com.haxepunk.utils.Input;
 class Main extends Engine 
 {
 	
-	public function new() 
-	{
-		super(800, 600, 60, false);
-			
-			// Create a Bank world
-			//FP.world = new Bank();
-			
-	}
-	
 	override public function init()
 	{
-		Sys.println("THIS IS WORKING PROPERLY");
-	}
-	
-	override public function update() 
-	{
-		super.update();
+#if debug
+		HXP.console.enable();
+#end
+		HXP.screen.scale = 3;
 		
-		if (Input.check(Key.DELETE))
-			FP.console.enable();
-		Input.mouseCursor = "hide";
+		HXP.world = new Bank();
+	}
+
+	public static function main()
+	{
+		new Main();
 	}
 }

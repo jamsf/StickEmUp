@@ -1,4 +1,4 @@
-package src.com.stickemup.entities;
+package com.stickemup.entities;
 
 import com.haxepunk.Entity;
 
@@ -11,7 +11,7 @@ class IsoEntity extends Entity
 
 	public function new() 
 	{
-		
+		super();
 	}
 	
 }

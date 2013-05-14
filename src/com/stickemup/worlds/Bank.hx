@@ -1,4 +1,7 @@
-package src.com.stickemup.worlds;
+package com.stickemup.worlds;
+
+import com.stickemup.entities.Player;
+import com.stickemup.worlds.IsoWorld;
 
 /**
  * ...
@@ -6,10 +9,21 @@ package src.com.stickemup.worlds;
  */
 class Bank extends IsoWorld
 {
-
 	public function new() 
 	{
-		
+		super();
 	}
 	
+	override public function begin()
+	{
+		super.begin();
+		
+		add(new Player());
+	}
+	
+	override public function update() 
+	{
+		super.update();
+		
+	}
 }

@@ -8,12 +8,9 @@
 	<!-- output -->
 	<app main="com.stickemup.Main" file="StickEmUp" path="bin" />
 	
-	<window background="#000000" fps="60" />
+	<window background="#202020" fps="60" />
 	<window width="800" height="600" unless="mobile" />
 	<window orientation="landscape" vsync="true" antialiasing="0" if="cpp" />
-	
-	<flash background="#000000" fps="60" />
-	<flash width="800" height="600" />
 	
 	<!-- classpath, haxe libs -->
 	<source path="src" />

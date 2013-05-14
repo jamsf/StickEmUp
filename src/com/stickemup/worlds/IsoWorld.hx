@@ -1,4 +1,4 @@
-package src.com.stickemup.worlds;
+package com.stickemup.worlds;
 
 import com.haxepunk.World;
 
@@ -11,7 +11,7 @@ class IsoWorld extends World
 
 	public function new() 
 	{
-		
+		super();
 	}
 	
 }
